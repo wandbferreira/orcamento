@@ -1,0 +1,363 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+    background:url(img/background.png) top repeat-x #FFF;	
+}
+body{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+    font-size:14px;
+    line-height:20px;
+    color:#666;
+    font-family:Tahoma, Geneva, sans-serif;
+}
+#all{
+    width:1002px;
+    margin:0 auto;
+    height:auto;
+    text-align:left;
+}
+a{
+    color:#005500;
+    text-decoration:none;
+    outline:none;
+}
+a:hover , a:focus{
+    color:#007700;
+    outline:none;
+}
+/* ===============================|| ESTRUTURA BASICA ||===========================*/
+#topo{
+    float:left;
+    width:1002px;
+    height:15px;
+    background:url(img/all_fundo.png) 0px 0px no-repeat;
+}
+#meio{
+    float:left;
+    width:1002px;
+    height:auto;
+    background:url(img/all_fundo.png) -1002px 0px repeat-y;
+    padding-bottom:50px;
+}
+#base{
+    float:left;
+    width:1002px;
+    height:50px;
+    line-height:60px;
+    text-align:center;
+    font-size:12px;
+    color:#666;
+    background:url(img/all_fundo.png) -2004px 0px no-repeat;	
+}
+#esq{
+    float:left;
+    width:245px;
+    margin-left:30px;
+    display:inline;
+    overflow:hidden;
+}
+#logo{
+    float:left;
+    width:240px;
+    height:100px;
+    margin:15px 5px 5px 0px;
+    background:#F8F8F8;
+    border:solid 1px #CCCCCC;
+}
+#logo img{
+    margin:8px 2px;
+}
+#logo a:hover{
+    opacity: 0.85;
+    -moz-opacity: 0.85;
+    filter: alpha(opacity=85);
+}
+#logo a:active img{
+    top: 1px;
+    position: relative;
+}
+#menu{
+    float:left;
+    width:240px;
+    height:300px;
+    margin:5px 5px 15px 0px;
+    background:#F8F8F8;
+    border:solid 1px #CCCCCC;
+    list-style:none;
+    padding:10px 0px 0px 0px;
+}
+#menu li{
+    margin:3px 15px;
+    padding:0px;
+    border:solid 1px #BBB;
+    width:210px;
+    height:27px;
+    background:#DDD url(img/menu-li.png) repeat-x;
+    float:left;
+    overflow:hidden;
+}
+#menu li:hover{
+    background-position:0px 0px;
+    border-color:#555;
+    box-shadow:0px 0px 3px #999;
+}
+#menu li:active{
+    padding-top: 1px;
+}
+#menu li.title{
+    border:none;
+    background:none;
+    width:220px;
+    height:40px;
+    float:left;
+    text-align:center;
+    font-size:24px;
+    color:#F60;
+    border: 0px;
+    box-shadow: none;
+}
+#menu li a{
+    float:left;
+    width:100%;
+    height:27px;
+    line-height:27px;
+    font-size:16px;
+    color:#666;
+}
+#menu li a img{
+    border:0px;
+    margin:6px 10px;
+    float:left;
+}
+#cofrinho{
+    float:left;
+    width:240px;
+    height:178px;
+    background:url(img/porquinho.jpg) no-repeat;
+    border:solid 1px #CCC;
+    position:relative;
+}
+#cofrinho b{
+    float:left;
+    position:absolute;
+    width:130px;
+    height:20px;
+    line-height:20px;
+    font-size:16px;
+    color:#999;
+    top:90px;
+    left:110px;
+    text-align:center;
+    color:#060;
+}
+#conteudo{
+    float:left;
+    width:690px;
+    height:500px;
+    min-height:500px;
+    text-align:left;
+    margin:15px 5px 15px 5px;
+    background:#F8F8F8;
+    border:solid 1px #CCCCCC;
+    font-size:12px;
+}
+html > body #conteudo{
+    height:auto;
+}
+
+#consulta_calendario{
+    float:left;
+    width:220px;
+    height:22px;
+    line-height:22px;
+    border:solid 1px #666;
+    color:#333;
+    margin:50px 0px 0px 235px;
+    font-size:14px;
+    font-weight:bold;
+    padding:0px 2px;
+}
+.selected{
+    background:#EEE;	
+}
+
+
+
+.tabela .guardar{
+    color:#090 !important;
+    font-weight:bold !important;
+}
+.tabela .trans{
+    font-style:italic;
+    font-weight:bold;	
+}
+.tabela{
+    background:#DDD;
+    margin-left:20px;	
+}
+.tabela tr{
+    background:#F0F0F0;	
+}
+.tabela .th{
+    color:#FFF;
+}
+.tabela .total{
+    font-weight:bold;
+    background:#CCC;	
+}
+.tabela .itens{
+    font-weight:bold;
+    background:#999;
+    color:#EEE;
+    font-size:14px;
+}
+.tabela .icon{
+    float:left;	
+}
+.tabela i{
+    float:left;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:right;
+    font-size:11px;	
+}
+.tabela b{
+    float:left;
+    margin-left:30px;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:right;
+}
+em{
+    font-size:12px;
+    margin-left:20px;	
+}
+td em{
+    font-size:13px !important;	
+    margin: 0px !important;
+}
+.tabela.valores_finais{
+    float:left;
+    margin-left:20px;
+    font-size:14px;	
+}
+#total{
+    float:left;
+    width:296px;
+    height:66px;
+    background:url(img/total-box.png);
+    border:solid 1px #777;
+    margin:2px 0px 0px 65px;
+    font-size:18px;
+    text-align:center;
+    font-weight:normal;
+}
+#total span{
+    margin-top:10px;
+    float:left;
+    width:100%;	
+}
+#total i{
+    font-weight:normal;
+    float:left;
+    font-size:14px;
+    height:35px;
+    line-height:35px;
+    width:120px;
+    text-align:right;
+}
+#total b{
+    float:left;
+    width:150px;
+    height:35px;
+    text-align:right;
+    height:35px;
+    line-height:35px;
+}
+em.obs{
+    float:left !important;
+    margin-left:20px;
+}
+/* ===============================|| FORMATACAO ||===========================*/
+
+h1{
+    margin:40px 0px 20px 40px;
+    padding:0px;
+    font-size:20px;
+    color:#FF9900;
+    line-height:26px;
+    text-align:center;
+    font-weight:normal;
+}
+.red{
+    color:#B00 !important;
+}
+
+/* ===============================|| FORMULARIO ||===========================*/
+.formulario{
+    position:relative; top:0px;
+}
+.formulario table{
+    position:relative;
+}
+.yes , .no{
+    color:#555555;position:absolute;left:0px;top:5px;width:380px; padding:3px 0px; border: solid 1px #004488;
+    background:#CAE4FF; text-align:center; font-weight:normal;
+}
+.no{ 
+    border: solid 1px #FF0000; background:#FFE6E6;
+}
+.no.double , .yes.double{ top:-8px; line-height:18px;}
+.input{
+    width: 300px; height:auto; padding:4px 3px; border:solid 1px #888888; font-weight:bold; color:#333333; 
+    font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:1px 0px;
+}
+.input:focus{
+    border:solid 1px #003366;
+}
+.input#cap{
+    line-height:38px; width:100px; height:38px; font-size:18px; letter-spacing:3px; text-align:center	
+}
+.input.date{
+    width:130px !important;	
+}
+.button{
+    border: solid 1px #666; color:#333; width:100%; height:26px; margin-right:5px; font-size:15px;
+    background:#F90 url(img/body/gradient.png) 0px -10px; cursor:pointer
+}
+.button:hover , .button:focus{
+    cursor:pointer; background-position:0px -93px; color:#333; background-color:#CCC;
+}
+.formulario i{
+    float:left;
+    font-size:10px;
+    color:#B00;
+    line-height:10px;
+    margin:1px 0px 2px 0px;
+    padding:0px;
+    display:none;
+}
+.input_error , .input_error:focus{
+    border:solid 1px #B00;
+    background:#FEE;
+}
+
+.tabela em{
+    font-size:10px;	
+}
+.del{
+    float:left;
+    width:20px;
+    height:20px;
+    background:url(img/del-icon.png) 2px 2px no-repeat;
+    cursor:pointer;
+    display:none;
+    position:relative;
+    top:1px;
+    margin-right:1px;
+}
+td:hover .del{ display:block; }
