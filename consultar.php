@@ -106,7 +106,7 @@ for ($i = -4; $i <= 4; $i++) {
             ?>
         </select>
     </form>
-    <?
+    <?php
     //DATA SELECIONADA
     $data_sel = explode("-", $data);
     $mes = $data_sel[0];
@@ -184,7 +184,7 @@ for ($i = -4; $i <= 4; $i++) {
                 <td><?php echo converte_data($pag['data'], BR_D) ?></td>
                 <td align="right">R$ <?php echo moeda($pag['valor']); ?></td>
             </tr>
-            <?
+            <?php
         endwhile;
         //SOMA TOTAL POSITIVA
         $sql = mysql_query("SELECT SUM(valor) as positivo FROM pagamentos 
@@ -236,7 +236,7 @@ for ($i = -4; $i <= 4; $i++) {
                 <td><?php echo converte_data($pag['data'], BR_D) ?></td>
                 <td align="right">R$ <?php echo moeda($pag['valor']); ?></td>
             </tr>
-            <?
+            <?php
         endwhile;
         //SOMA TOTAL POSITIVA
         $sql = mysql_query("SELECT SUM(valor) as negativo FROM pagamentos 
@@ -293,14 +293,14 @@ for ($i = -4; $i <= 4; $i++) {
     </table>
     <div id="total">
         <span>VALOR TOTAL:</span><br />
-<?
+<?php
 //VALORES TOTAIS
 $total = ($atual_pos[0] + $atual_pos[1] - $atual_neg[0] - $atual_neg[1] + $restante1 + $restante2 + $cofrinho);
 $prev_total = ($positivo + $restante1 + $restante2) - $negativo + $prev_cofrinho;
 ?>
-        <i <?php red($total); ?> title="<?= moeda($atual_pos[0] + $atual_pos[1] + $restante1 + $restante2) ?> - <?= moeda($atual_neg[0] + $atual_neg[1]); ?> <?= $sc ?> <?= moeda(abs($cofrinho)) ?>*">
+        <i <?php red($total); ?> title="<?php echo moeda($atual_pos[0] + $atual_pos[1] + $restante1 + $restante2) ?> - <?php echo moeda($atual_neg[0] + $atual_neg[1]); ?> <?php echo $sc ?> <?php echo moeda(abs($cofrinho)) ?>*">
             R$ <?php echo moeda($total); ?></i>
-        <b <?php red($prev_total); ?> title="<?php echo moeda($positivo + $restante1 + $restante2) ?> - <?php echo moeda($negativo) ?> <?= $spc ?> <?= moeda(abs($prev_cofrinho)) ?>*">
+        <b <?php red($prev_total); ?> title="<?php echo moeda($positivo + $restante1 + $restante2) ?> - <?php echo moeda($negativo) ?> <?php echo $spc ?> <?php echo moeda(abs($prev_cofrinho)) ?>*">
             R$ <?php echo moeda($prev_total); ?>#</b>
     </div>
     <br clear="all" />
@@ -320,4 +320,4 @@ $prev_total = ($positivo + $restante1 + $restante2) - $negativo + $prev_cofrinho
 
 
 </div>
-
+ 
